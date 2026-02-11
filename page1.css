@@ -136,3 +136,15 @@
   font-size: clamp(16px, 5vw, 18px);
   font-weight: bold;
 }
+@media (max-width: 600px) {
+    .win_TO {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media (max-width: 400px) {
+    .win_TO {
+        gap: 3px;
+    }
+}
+
