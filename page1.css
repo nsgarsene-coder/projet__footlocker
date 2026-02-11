@@ -30,3 +30,12 @@
       height: 100vh;
       background-color: var(--bg);
   }
+    .hero_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 50Px;
+    
+    }
