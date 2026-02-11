@@ -1,0 +1,114 @@
+body {
+    background-color: #000; 
+    color: white;
+    font-family: 'Arial Black', sans-serif; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 402px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.logo {
+    width: 100px; 
+    margin-bottom: 185px;
+}
+.main-title {
+    font-size: 45px; 
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.badge-red {
+    background-color: #ed1c24; 
+    padding: 0 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.wheel-section {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.wheel-section img {
+    width: 644.49px; 
+    height: auto;
+    position: absolute;
+    top: 0;
+}
+.form-card {
+    background-color: #1a1a1a; 
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    padding: 30px 20px;
+    margin-top: -40px; 
+    z-index: 10;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555; 
+    color: rgb(238, 236, 236);
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+form-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
+/* 1. On aligne le texte et la case proprement */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start; /* Aligne en haut si le texte fait 2 lignes */
+    gap: 10px;               /* Espace entre la case et le texte */
+    margin-bottom: 20px;     /* Espace avant le bouton */
+    color: white;
+    font-size: 14px;
+    text-align: left;
+}
+
+.checkbox-group input {
+    margin-top: 4px;         /* Ajuste la hauteur de la case par rapport au texte */
+}
+
+/* 2. On centre le bouton sans qu'il soit géant */
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    width: 100%;
+}
+
+.btn-submit {
+    background-color: #e61e2a; /* Le rouge exact */
+    color: white;
+    padding: 10px 40px;        /* Taille équilibrée */
+    border: none;
+    border-radius: 8px;        /* Coins arrondis comme sur l'image */
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 200px;          /* Empêche le bouton d'être trop petit */
+}
