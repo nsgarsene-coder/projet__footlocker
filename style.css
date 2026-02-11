@@ -132,6 +132,21 @@ button:focus-visible {
   object-fit: contain;
 }
 
+/* Main logo -------------------------------------------------- */
+
+.main-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem ;
+}
+
+.main-logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* Bottom logo -------------------------------------------------- */
 
 .bottom-logo-container {
