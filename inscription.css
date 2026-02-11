@@ -105,12 +105,21 @@ form-container {
     flex-shrink: 0;    
 
 }
+.checkbox-group label {
+    font-size: 14px;
+    color: white;
+    line-height: 1.4;
+}
 
 
 .button-wrapper {
     display: flex;
     justify-content: center; 
     width: 100%;
+}
+
+.checkbox-group a {
+    color: #007bff;
 }
 
 .btn-submit {
