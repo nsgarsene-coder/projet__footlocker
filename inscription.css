@@ -79,36 +79,36 @@ form-container {
     
 }
 
-/* 1. On aligne le texte et la case proprement */
+
 .checkbox-group {
     display: flex;
-    align-items: flex-start; /* Aligne en haut si le texte fait 2 lignes */
-    gap: 10px;               /* Espace entre la case et le texte */
-    margin-bottom: 20px;     /* Espace avant le bouton */
+    align-items: flex-start; 
+    gap: 10px;               
+    margin-bottom: 20px;     
     color: white;
     font-size: 14px;
     text-align: left;
 }
 
 .checkbox-group input {
-    margin-top: 4px;         /* Ajuste la hauteur de la case par rapport au texte */
+    margin-top: 4px;         
 }
 
-/* 2. On centre le bouton sans qu'il soit géant */
+
 .button-wrapper {
     display: flex;
-    justify-content: center; /* Centre horizontalement */
+    justify-content: center; /
     width: 100%;
 }
 
 .btn-submit {
-    background-color: #e61e2a; /* Le rouge exact */
+    background-color: #e61e2a; 
     color: white;
-    padding: 10px 40px;        /* Taille équilibrée */
+    padding: 10px 40px;        
     border: none;
-    border-radius: 8px;        /* Coins arrondis comme sur l'image */
+    border-radius: 8px;         
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    min-width: 200px;          /* Empêche le bouton d'être trop petit */
+    min-width: 200px;          
 }
