@@ -22,7 +22,7 @@
       background-color: var(--bg);
       color: var(--text);
   }
-  .container1 {
+  .container {
       display: grid;
       flex-direction: column;
       align-items: center;
@@ -30,7 +30,7 @@
       height:  clamp(100vh, 100vw, 100vh);
       background-color: var(--bg);
   }
-    .hero_section1 {
+    .hero_section {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,7 +40,7 @@
         position: relative;
     
     }
-   .section_container1 {
+   .section_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,7 +49,7 @@
     background-color: var(--bg);
      position: relative;
    }
-   .word_spin1 {
+   .word_spin {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,18 +63,18 @@
     align-items: center;
         gap: clamp(10px, 5vw, 10px);
    }
-   .logo_win1 {
+   .logo_win {
      display: flex;
     align-items: center;
     justify-content: center;
    }
-    .win_logo1 {
+    .win_logo {
         max-width: 156px;
         display: flex;
         height: clamp(40px, 10vw, 54px);
         
     }
-    .carré1 {
+    .carré {
         position: relative;
         width: clamp(40px, 10vw, 54px);
         height: clamp(40px, 10vw, 54px);
@@ -87,20 +87,20 @@
         justify-content: center;
         font-family: Arial, Helvetica, sans-serif;
     }
-    .wheel_section1 {
+    .wheel_section {
   position: relative;
   width: clamp(300px, 80vw, 402px);
   margin: 0 auto;
   margin-bottom: 0;
 }
 
-.wheel_section1 svg {
+.wheel_section svg {
   width: clamp(100%, 80vw, 100%);
   height: auto;
   display: block;
 }
 
-.CTA_container1 {
+.CTA_container {
   position: absolute;
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@
 
 }
 
-.CTA_button1 {
+.CTA_button {
   background: #D70101;
   color: white;
   font-weight: clamp(700px, 5vw, 700px);
@@ -133,7 +133,7 @@
   transition: background-color 0.3s ease;
   display: flex; align-items: center; justify-content: center;
 }
-.CTA_button1:hover {
+.CTA_button:hover {
   background-color: #AC0000;
 }
 .text1 {
@@ -169,7 +169,7 @@ body {
     min-height: 100vh;
 }
 
-.game-container2 {
+.game-container {
     width: 100%;
     max-width: 402px;
     display: flex;
@@ -198,28 +198,28 @@ body {
     }
 }
 
-.logo2 {
+.logo {
     width: 120px; 
     height: auto;
     margin: 0 auto 24px auto;
     display: block;
 }
 
-.main-title2 {
+.main-title {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 0 24px;
 }
 
-.main-logo2 {
+.main-logo {
     width: 220px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-.wheel-section2 {
+.wheel-section {
     width: 100%;
     height: 100px;
     overflow: hidden;
@@ -230,7 +230,7 @@ body {
     margin: 0;
 }
 
-.wheel-section2 img {
+.wheel-section img {
     width: 100%;
     max-width: 600px;
     min-width: 420px;
@@ -246,7 +246,7 @@ body {
         height: 200px;
     }
     
-    .wheel-section2 img {
+    .wheel-section img {
         max-width: 800px;
         min-width: 600px;
     }
@@ -254,7 +254,7 @@ body {
 
 
 
-.form-card2 {
+.form-card {
     background-color: #1a1a1a; 
     width: 100%;
     border-radius: 40px 40px 0 0;
@@ -273,20 +273,20 @@ body {
         align-items: center;
     }
     
-    .form-card2 form {
+    .form-card form {
         width: 100%;
         max-width: 500px;
     }
 }
 
-.form-title2 {
+.form-title {
     margin: 0 0 24px;
     font-size: 18px;
     text-align: left;
     font-weight: bold;
 }
 
-.input-group2 {
+.input-group {
     margin-bottom: 16px;
 }
 
@@ -343,23 +343,23 @@ input[type="tel"]:focus {
     font-weight: normal;
 }
 
-.checkbox-container2 a {
+.checkbox-container a {
     color: #e61e2a;
     text-decoration: none;
 }
 
-.checkbox-container2 a:hover {
+.checkbox-container a:hover {
     text-decoration: underline;
 }
 
-.button-wrapper2 {
+.button-wrapper {
     display: flex;
     justify-content: center; 
     width: 100%;
     margin-top: 32px;
 }
 
-.btn-submit2 {
+.btn-submit {
     background-color: #e61e2a; 
     font-family: 'Arial Black', sans-serif;
     color: white;
@@ -373,10 +373,10 @@ input[type="tel"]:focus {
     text-transform: none;
 }
 
-.btn-submit2:hover {
+.btn-submit:hover {
     background-color: #cc1a24;
 }
-*,
+*
 *::before,
 *::after {
   box-sizing: border-box;
