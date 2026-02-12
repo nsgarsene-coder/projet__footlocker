@@ -6,7 +6,7 @@
     <title>Foot Locker - Spin to Win</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="form-page">
 
     <main class="game-container">
         
@@ -24,7 +24,7 @@
 
         <section class="form-card">
             <h2 class="form-title">Personal Information</h2>
-            <form action="page3.html" method="POST">
+            <form id="registrationForm" action="page3.html" method="GET">
                 <div class="input-group">
                     <input type="text" name="fullname" placeholder="Full name..." required>
                 </div>
@@ -50,6 +50,16 @@
         </section>
 
     </main>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Validate form (browser validation already handles required fields)
+            if (this.checkValidity()) {
+                window.location.href = 'page3.html';
+            }
+        });
+    </script>
 
 </body>
 </html>
