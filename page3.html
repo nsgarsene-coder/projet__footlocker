@@ -68,35 +68,7 @@
       />
     </footer>
 
-    <script>
-      // Basic hooks – replace with real navigation / logic later
-      const backButton = document.getElementById("backButton");
-      const accountButton = document.getElementById("accountButton");
-      const goButton = document.getElementById("goButton");
-      const wheel = document.getElementById("wheel");
 
-      backButton?.addEventListener("click", () => {
-        // TODO: replace with your real "back" behavior
-        window.history.back();
-      });
-
-      accountButton?.addEventListener("click", () => {
-        // TODO: replace with your account management URL / route
-        // Example:
-        // window.location.href = "/account.html";
-        alert("Go to account management page");
-      });
-
-      goButton?.addEventListener("click", () => {
-        if (!wheel) return;
-
-        // Simple fake spin animation (CSS class toggling)
-        wheel.classList.remove("spin");
-        // force reflow so animation can restart
-        void wheel.offsetWidth;
-        wheel.classList.add("spin");
-      });
-    </script>
   </body>
   </html>
 
