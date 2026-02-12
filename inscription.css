@@ -1,0 +1,218 @@
+body {
+    background-color: #000; 
+    color: white;
+    font-family: 'Arial Black', sans-serif; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 402px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0;
+    padding: 24px 16px 40px;
+}
+
+/* Desktop layout - full width form */
+@media (min-width: 768px) {
+    .game-container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.header {
+    text-align: center;
+    padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 40px 0 20px;
+    }
+}
+
+.logo {
+    width: 120px; 
+    height: auto;
+    margin: 0 auto 24px auto;
+    display: block;
+}
+
+.main-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 24px;
+}
+
+.main-logo {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.wheel-section {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+}
+
+.wheel-section img {
+    width: 100%;
+    max-width: 600px;
+    min-width: 420px;
+    height: auto;
+    position: absolute;
+    bottom: -340%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+    .wheel-section {
+        height: 200px;
+    }
+    
+    .wheel-section img {
+        max-width: 800px;
+        min-width: 600px;
+    }
+}
+
+
+
+.form-card {
+    background-color: #1a1a1a; 
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    padding: 30px 20px 32px;
+    margin-top: 0;
+    z-index: 10;
+}
+
+@media (min-width: 768px) {
+    .form-card {
+        max-width: 100%;
+        border-radius: 0;
+        padding: 60px 20px 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .form-card form {
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+.form-title {
+    margin: 0 0 24px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    color: #888;
+    padding: 14px 16px;
+    margin-bottom: 0;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+    color: #666;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background-color: transparent;
+    border: 2px solid #666;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    color: #999;
+    font-family: Arial, sans-serif;
+    font-weight: normal;
+}
+
+.checkbox-container a {
+    color: #e61e2a;
+    text-decoration: none;
+}
+
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    margin-top: 32px;
+}
+
+.btn-submit {
+    background-color: #e61e2a; 
+    font-family: 'Arial Black', sans-serif;
+    color: white;
+    padding: 14px 50px;        
+    border: none;
+    border-radius: 8px;         
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 200px;
+    text-transform: none;
+}
+
+.btn-submit:hover {
+    background-color: #cc1a24;
+}
