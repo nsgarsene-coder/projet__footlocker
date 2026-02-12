@@ -81,10 +81,11 @@
         background-color: #AC0000;
         color: var(--text);
         display: flex;
-        font-size: 18px;
+        font-size: 25px;
         font-weight: bold;
         align-items: center;
         justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
     }
     .wheel_section {
   position: relative;
@@ -120,16 +121,25 @@
   color: white;
   font-weight: clamp(700px, 5vw, 700px);
   font-size: clamp(16px, 5vw, 18px);
-  border-radius: clamp(12px, 5vw, 12px);
+  border-radius: 0;
   border: none;
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: clamp(18px, 5vw, 18px) clamp(40px, 10vw, 40px);
+  width: clamp(186px, 100%, 186px);
+  height: clamp(66px, 15vw, 66px);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex; align-items: center; justify-content: center;
+}
+.CTA_button:hover {
+  background-color: #AC0000;
 }
 .text1 {
   font-size: clamp(14px, 5vw, 16px);
   margin-bottom: clamp(8px, 2vw, 8px);
+  font-weight: bold;
   
 }
 .text2 {
