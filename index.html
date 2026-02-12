@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foot Locker - Spin The Wheel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <button class="icon-button back-button" id="backButton" aria-label="Back">
+        <img src="assets/backarrow_icon.svg" alt="Back" />
+      </button>
+
+      <div class="top-spacer"></div>
+
+      <button
+        class="icon-button account-button"
+        id="accountButton"
+        aria-label="Account"
+      >
+        <img src="assets/account_icon.svg" alt="Account" />
+      </button>
+    </header>
+
+    <div class="main-logo-container">
+      <img
+        src="assets/main_logo.svg"
+        alt="Main logo"
+        class="main-logo"
+      />
+    </div>
+
+    <main class="main-layout">
+      <section class="wheel-section">
+        <div class="wheel-wrapper">
+          <img
+            src="assets/wheel.png"
+            alt="Spin the wheel"
+            class="wheel-image"
+            id="wheel"
+          />
+
+          <button
+            class="go-button"
+            id="goButton"
+            aria-label="Spin the wheel"
+          >
+            <img src="assets/go_button.png" alt="Go" />
+          </button>
+        </div>
+
+        <div class="spin-counter">
+          <img
+            src="assets/spin_counter.png"
+            alt="Remaining spins"
+            class="spin-counter-image"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="bottom-logo-container">
+      <img
+        src="assets/footlocker_logo.png"
+        alt="Foot Locker logo"
+        class="footlocker-logo"
+      />
+    </footer>
+
+    <script>
+      // Basic hooks – replace with real navigation / logic later
+      const backButton = document.getElementById("backButton");
+      const accountButton = document.getElementById("accountButton");
+      const goButton = document.getElementById("goButton");
+      const wheel = document.getElementById("wheel");
+
+      backButton?.addEventListener("click", () => {
+        // TODO: replace with your real "back" behavior
+        window.history.back();
+      });
+
+      accountButton?.addEventListener("click", () => {
+        // TODO: replace with your account management URL / route
+        // Example:
+        // window.location.href = "/account.html";
+        alert("Go to account management page");
+      });
+
+      goButton?.addEventListener("click", () => {
+        if (!wheel) return;
+
+        // Simple fake spin animation (CSS class toggling)
+        wheel.classList.remove("spin");
+        // force reflow so animation can restart
+        void wheel.offsetWidth;
+        wheel.classList.add("spin");
+      });
+    </script>
+  </body>
+  </html>
+
+
