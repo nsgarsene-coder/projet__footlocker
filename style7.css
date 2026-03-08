@@ -11,3 +11,57 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
 }
+.mobile-container {
+    background-color: #000000;
+    width: 375px;
+    height: 812px;
+    max-height: 90vh;
+    border-radius: 30px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #333;
+}
+
+.back-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+.main-tittle {
+    color: white;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+
+.coupon-bar {
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10ox;
+}
+
+.foot-locker-logo {
+    width: 110px;
+    height: auto;
+}
