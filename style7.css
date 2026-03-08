@@ -36,10 +36,11 @@ body {
     text-decoration: none;
 }
 
-.main-tittle {
+.main-title {
     color: white;
     text-align: center;
     margin: 40px 0;
+    font-family: sans-serif;
     text-transform: uppercase;
 }
 
