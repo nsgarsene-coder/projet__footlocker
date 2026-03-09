@@ -33,7 +33,7 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
-/* Top bar ------------------------------------------------------ */
+/* top bar */
 
 .top-bar {
   display: flex;
@@ -62,7 +62,7 @@ button:focus-visible {
   flex: 1;
 }
 
-/* Main layout -------------------------------------------------- */
+/* main layout */
 
 .main-layout {
   flex: 1;
@@ -70,6 +70,7 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   padding: 0 1.5rem;
+  gap: 20px;
 }
 
 .wheel-section {
@@ -79,6 +80,7 @@ button:focus-visible {
   gap: 1.5rem;
   width: 100%;
   max-width: 420px;
+  margin: 1rem 0;
 }
 
 .wheel-wrapper {
@@ -132,13 +134,14 @@ button:focus-visible {
   object-fit: contain;
 }
 
-/* Main logo -------------------------------------------------- */
+/* main logo */
 
 .main-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.1rem ;
+  margin: 1.2rem 0;
 }
 
 .main-logo {
@@ -147,13 +150,14 @@ button:focus-visible {
   object-fit: contain;
 }
 
-/* Bottom logo -------------------------------------------------- */
+/* bottom logo */
 
 .bottom-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.2rem 0 1.6rem;
+  margin-top: 1rem;
 }
 
 .footlocker-logo {
@@ -162,22 +166,42 @@ button:focus-visible {
   object-fit: contain;
 }
 
-/* Spin animation ----------------------------------------------- */
 
-@keyframes spin-wheel {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1440deg);
-  }
-}
 
 .wheel-image.spin {
   animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
-/* Responsive tweaks -------------------------------------------- */
+/* overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#toggle:checked ~ .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay img {
+  max-width: 80%;
+  height: auto;
+}
+
+#toggle:checked ~ .content {
+  filter: blur(6px);
+  transition: filter 0.3s ease;
+}
+
+/* responsive */
 
 @media (min-height: 780px) {
   .wheel-section {
