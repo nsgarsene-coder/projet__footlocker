@@ -211,8 +211,10 @@ body.page2 .btn-submit {
   cursor: pointer;
   min-width: 200px;
   text-transform: none;
+  text-decoration: none;
 }
 
 body.page2 .btn-submit:hover {
   background-color: #cc1a24;
+  text-decoration: none;
 }
