@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body.page7 {
+    background-color: black;
+    display: block;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+body.page7 .mobile-container {
+    background-color: #000000;
+    width: 95%;
+    max-width: 380px;
+    height: 90vh;
+    max-height: 800px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: none;
+    margin: 20px auto;
+    overflow-y: auto;
+}
+
+body.page7 .back-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+body.page7 .main-title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+body.page7 details {
+  margin-top: 20px;
+  
+}
+
+body.page7 .coupon-details {
+    display: flex;
+  background-color: #D9D9D9;
+  padding: 15px 20px;
+  color: black;
+    border-radius: 5px;
+    justify-content: center;
+   flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.page7 .chevron {
+  transition: transform 0.3s;
+}
+
+body.page7 details[open] .chevron {
+  transform: rotate(180deg);
+}
+body.page7 details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+body.page7 details summary::-webkit-details-marker {
+  display: none;
+}
+
+body.page7 .coupon-bar {
+  display: flex;
+  background-color: #D9D9D9;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+body.page7 .promo-code {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+body.page7 .footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+body.page7 .foot-locker-logo {
+    width: 110px;
+    height: auto;
+}
