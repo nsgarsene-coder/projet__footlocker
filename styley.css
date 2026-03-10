@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-body.pageY {
+body.pagey {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   min-height: 100vh;
@@ -16,26 +16,26 @@ body.pageY {
   color: #f9fafb;
 }
 
-body.pageY img {
+body.pagey img {
   max-width: 100%;
   display: block;
 }
 
-body.pageY button {
+body.pagey button {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
 }
 
-body.pageY button:focus-visible {
+body.pagey button:focus-visible {
   outline: 2px solid #f97316;
   outline-offset: 3px;
 }
 
-/* Top bar ------------------------------------------------------ */
+/* top bar */
 
-body.pageY .top-bar {
+body.pagey .top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +44,7 @@ body.pageY .top-bar {
   z-index: 10;
 }
 
-body.pageY .icon-button {
+body.pagey .icon-button {
   width: 36px;
   height: 36px;
   display: flex;
@@ -52,36 +52,38 @@ body.pageY .icon-button {
   justify-content: center;
 }
 
-body.pageY .icon-button img {
+body.pagey .icon-button img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-body.pageY .top-spacer {
+body.pagey .top-spacer {
   flex: 1;
 }
 
-/* Main layout -------------------------------------------------- */
+/* main layout */
 
-body.pageY .main-layout {
+body.pagey .main-layout {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 1.5rem;
+  gap: 20px;
 }
 
-body.pageY .wheel-section {
+body.pagey .wheel-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
   width: 100%;
   max-width: 420px;
+  margin: 1rem 0;
 }
 
-body.pageY .wheel-wrapper {
+body.pagey .wheel-wrapper {
   position: relative;
   width: min(80vw, 360px);
   aspect-ratio: 1 / 1;
@@ -90,7 +92,7 @@ body.pageY .wheel-wrapper {
   justify-content: center;
 }
 
-body.pageY .wheel-image {
+body.pagey .wheel-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -98,7 +100,7 @@ body.pageY .wheel-image {
   transition: transform 0.8s ease-out;
 }
 
-body.pageY .go-button {
+body.pagey .go-button {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -108,83 +110,105 @@ body.pageY .go-button {
   transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-body.pageY .go-button img {
+body.pagey .go-button img {
   width: 100%;
   height: auto;
 }
 
-body.pageY .go-button:hover {
+body.pagey .go-button:hover {
   transform: translate(-50%, -50%) scale(1.04);
   filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.4));
 }
 
-body.pageY .go-button:active {
+body.pagey .go-button:active {
   transform: translate(-50%, -50%) scale(0.96);
 }
 
-body.pageY .spin-counter {
+body.pagey .spin-counter {
   width: min(58vw, 260px);
 }
 
-body.pageY .spin-counter-image {
+body.pagey .spin-counter-image {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-/* Main logo -------------------------------------------------- */
+/* main logo */
 
-body.pageY .main-logo-container {
+body.pagey .main-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.1rem ;
+  margin: 1.2rem 0;
 }
 
-body.pageY .main-logo {
+body.pagey .main-logo {
   height: 100px;
   width: auto;
   object-fit: contain;
 }
 
-/* Bottom logo -------------------------------------------------- */
+/* bottom logo */
 
-body.pageY .bottom-logo-container {
+body.pagey .bottom-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.2rem 0 1.6rem;
+  margin-top: 1rem;
 }
 
-body.pageY .footlocker-logo {
+body.pagey .footlocker-logo {
   height: 38px;
   width: auto;
   object-fit: contain;
 }
 
-/* Spin animation ----------------------------------------------- */
 
-@keyframes spin-wheel {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(1440deg);
-  }
-}
 
-body.pageY .wheel-image.spin {
+body.pagey .wheel-image.spin {
   animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
-/* Responsive tweaks -------------------------------------------- */
+/* overlay */
+body.pagey .overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+body.pagey #toggle:checked ~ .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.pagey .overlay img {
+  max-width: 80%;
+  height: auto;
+}
+
+body.pagey #toggle:checked ~ .content {
+  filter: blur(6px);
+  transition: filter 0.3s ease;
+}
+
+/* responsive */
 
 @media (min-height: 780px) {
-  body.pageY .wheel-section {
+  body.pagey .wheel-section {
     gap: 2rem;
   }
 
-  body.pageY .bottom-logo-container {
+  body.pagey .bottom-logo-container {
     padding-top: 1.6rem;
   }
 }
