@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-body {
+body.pagey {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   min-height: 100vh;
@@ -16,26 +16,26 @@ body {
   color: #f9fafb;
 }
 
-img {
+body.pagey img {
   max-width: 100%;
   display: block;
 }
 
-button {
+body.pagey button {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
 }
 
-button:focus-visible {
+body.pagey button:focus-visible {
   outline: 2px solid #f97316;
   outline-offset: 3px;
 }
 
 /* top bar */
 
-.top-bar {
+body.pagey .top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +44,7 @@ button:focus-visible {
   z-index: 10;
 }
 
-.icon-button {
+body.pagey .icon-button {
   width: 36px;
   height: 36px;
   display: flex;
@@ -52,19 +52,19 @@ button:focus-visible {
   justify-content: center;
 }
 
-.icon-button img {
+body.pagey .icon-button img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.top-spacer {
+body.pagey .top-spacer {
   flex: 1;
 }
 
 /* main layout */
 
-.main-layout {
+body.pagey .main-layout {
   flex: 1;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@ button:focus-visible {
   gap: 20px;
 }
 
-.wheel-section {
+body.pagey .wheel-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,7 +83,7 @@ button:focus-visible {
   margin: 1rem 0;
 }
 
-.wheel-wrapper {
+body.pagey .wheel-wrapper {
   position: relative;
   width: min(80vw, 360px);
   aspect-ratio: 1 / 1;
@@ -92,7 +92,7 @@ button:focus-visible {
   justify-content: center;
 }
 
-.wheel-image {
+body.pagey .wheel-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -100,7 +100,7 @@ button:focus-visible {
   transition: transform 0.8s ease-out;
 }
 
-.go-button {
+body.pagey .go-button {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -110,25 +110,25 @@ button:focus-visible {
   transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-.go-button img {
+body.pagey .go-button img {
   width: 100%;
   height: auto;
 }
 
-.go-button:hover {
+body.pagey .go-button:hover {
   transform: translate(-50%, -50%) scale(1.04);
   filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.4));
 }
 
-.go-button:active {
+body.pagey .go-button:active {
   transform: translate(-50%, -50%) scale(0.96);
 }
 
-.spin-counter {
+body.pagey .spin-counter {
   width: min(58vw, 260px);
 }
 
-.spin-counter-image {
+body.pagey .spin-counter-image {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -136,7 +136,7 @@ button:focus-visible {
 
 /* main logo */
 
-.main-logo-container {
+body.pagey .main-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +144,7 @@ button:focus-visible {
   margin: 1.2rem 0;
 }
 
-.main-logo {
+body.pagey .main-logo {
   height: 100px;
   width: auto;
   object-fit: contain;
@@ -152,7 +152,7 @@ button:focus-visible {
 
 /* bottom logo */
 
-.bottom-logo-container {
+body.pagey .bottom-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +160,7 @@ button:focus-visible {
   margin-top: 1rem;
 }
 
-.footlocker-logo {
+body.pagey .footlocker-logo {
   height: 38px;
   width: auto;
   object-fit: contain;
@@ -168,12 +168,12 @@ button:focus-visible {
 
 
 
-.wheel-image.spin {
+body.pagey .wheel-image.spin {
   animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 /* overlay */
-.overlay {
+body.pagey .overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
@@ -186,17 +186,17 @@ button:focus-visible {
   z-index: 1000;
 }
 
-#toggle:checked ~ .overlay {
+body.pagey #toggle:checked ~ .overlay {
   visibility: visible;
   opacity: 1;
 }
 
-.overlay img {
+body.pagey .overlay img {
   max-width: 80%;
   height: auto;
 }
 
-#toggle:checked ~ .content {
+body.pagey #toggle:checked ~ .content {
   filter: blur(6px);
   transition: filter 0.3s ease;
 }
@@ -204,11 +204,11 @@ button:focus-visible {
 /* responsive */
 
 @media (min-height: 780px) {
-  .wheel-section {
+  body.pagey .wheel-section {
     gap: 2rem;
   }
 
-  .bottom-logo-container {
+  body.pagey .bottom-logo-container {
     padding-top: 1.6rem;
   }
 }
