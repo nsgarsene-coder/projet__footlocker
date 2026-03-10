@@ -33,6 +33,7 @@ body.pageY button:focus-visible {
   outline-offset: 3px;
 }
 
+/* Top bar ------------------------------------------------------ */
 
 body.pageY .top-bar {
   display: flex;
@@ -131,6 +132,7 @@ body.pageY .spin-counter-image {
   object-fit: contain;
 }
 
+/* Main logo -------------------------------------------------- */
 
 body.pageY .main-logo-container {
   display: flex;
