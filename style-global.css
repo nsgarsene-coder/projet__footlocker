@@ -1,0 +1,1038 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.page1_1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #191919;
+  color: #f9fafb;
+}
+
+body.page1_1 img {
+  max-width: 100%;
+  display: block;
+}
+
+body.page1_1 button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+body.page1_1 button:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 3px;
+}
+
+
+
+body.page1_1 .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  position: relative;
+  z-index: 10;
+}
+
+body.page1_1 .icon-button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.page1_1 .icon-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body.page1_1 .top-spacer {
+  flex: 1;
+}
+
+body.page1_1 .main-layout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+body.page1_1 .wheel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+body.page1_1 .wheel-wrapper {
+  position: relative;
+  width: min(80vw, 360px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.page1_1 .wheel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.8s ease-out;
+}
+
+body.page1_1 .go-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  max-width: 110px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+body.page1_1 .go-button img {
+  width: 100%;
+  height: auto;
+}
+
+body.page1_1 .go-button:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.4));
+}
+
+body.page1_1 .go-button:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+body.page1_1 .spin-counter {
+  width: min(58vw, 260px);
+}
+
+body.page1_1 .spin-counter-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+body.page1_1 .main-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem ;
+}
+
+body.page1_1 .main-logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Bottom logo -------------------------------------------------- */
+
+body.page1_1 .bottom-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0 1.6rem;
+}
+
+body.page1_1 .footlocker-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Spin animation ----------------------------------------------- */
+
+@keyframes spin-wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1440deg);
+  }
+}
+
+body.page1_1 .wheel-image.spin {
+  animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* Responsive tweaks -------------------------------------------- */
+
+@media (min-height: 780px) {
+  body.page1_1 .wheel-section {
+    gap: 2rem;
+  }
+
+  body.page1_1 .bottom-logo-container {
+    padding-top: 1.6rem;
+  }
+}
+
+
+ /* Dark mode par défaut */
+  :root {
+      --bg: #0f0f14;
+      --text: #f1f1f1;
+      --accent: #7a64b2;
+      --card: #1a1a24;
+      --border: #2a2a3a;
+  }
+
+  /* Si l'utilisateur préfère le clair */
+  @media (prefers-color-scheme: light) {
+      :root {
+          --bg: #ffffff;
+          --text: #111111;
+          --accent: #0071e3;
+          --card: #f5f5f7;
+          --border: #dcdcdc;
+      }
+  }
+
+  body.page1 {
+      background-color: var(--bg);
+      color: var(--text);
+  }
+  body.page1 .container {
+      display: grid;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height:  clamp(100vh, 100vw, 100vh);
+      background-color: var(--bg);
+  }
+    body.page1 .hero_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: clamp(50px, 10vw, 50px);
+        position: relative;
+    
+    }
+   body.page1 .section_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    background-color: var(--bg);
+     position: relative;
+   }
+   
+    body.page1 .wheel_section {
+  position: relative;
+  width: clamp(300px, 80vw, 402px);
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+
+body.page1 .wheel_section svg {
+  width: clamp(100%, 80vw, 100%);
+  height: auto;
+  display: block;
+}
+
+body.page1 .CTA_container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(300px, 80vw, 402px);
+  height: clamp(185px, 40vw, 185px);
+  background: #111;
+  border-radius: clamp(24px, 5vw, 24px) clamp(24px, 5vw, 24px) 0 0;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
+  bottom: 0;
+  left: 0;
+ right: 0;
+
+}
+
+body.page1 .CTA_button {
+  background: #D70101;
+  color: white;
+  font-weight: clamp(700px, 5vw, 700px);
+  font-size: clamp(16px, 5vw, 18px);
+  border-radius: clamp(12px, 5vw, 12px);
+  border: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(18px, 5vw, 18px) clamp(40px, 10vw, 40px);
+}
+body.page1 .text1 {
+  font-size: clamp(14px, 5vw, 16px);
+  margin-bottom: clamp(8px, 2vw, 8px);
+  
+}
+body.page1 .text2 {
+  font-size: clamp(16px, 5vw, 18px);
+  font-weight: bold;
+}
+body.page1 a {
+    color: var(--accent);
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    body.page1 .win_TO {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+@media (max-width: 400px) {
+    body.page1 .win_TO {
+        gap: 3px;
+    }
+}
+
+body.page2 {
+  background-color: #191919; 
+  color: white;
+  font-family: 'Arial Black', sans-serif; 
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body.page2 .game-container {
+  width: 100%;
+  max-width: 402px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 0;
+  padding: 24px 16px 40px;
+}
+
+/* Desktop layout - full width form */
+@media (min-width: 768px) {
+  body.page2 .game-container {
+      max-width: 100%;
+      padding: 0;
+  }
+}
+
+body.page2 .header {
+  text-align: center;
+  padding-top: 8px;
+}
+
+@media (min-width: 768px) {
+  body.page2 .header {
+      padding: 40px 0 20px;
+  }
+}
+
+body.page2 .logo {
+  width: 120px; 
+  height: auto;
+  margin: 0 auto 24px auto;
+  display: block;
+}
+
+body.page2 .main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 24px;
+}
+
+body.page2 .main-logo {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+body.page2 .wheel-section {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0;
+}
+
+body.page2 .wheel-section img {
+  width: 100%;
+  max-width: 600px;
+  min-width: 420px;
+  height: auto;
+  position: absolute;
+  bottom: -340%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  body.page2 .wheel-section {
+      height: 200px;
+  }
+  
+  body.page2 .wheel-section img {
+      max-width: 800px;
+      min-width: 600px;
+  }
+}
+
+
+
+body.page2 .form-card {
+  background-color: #1a1a1a; 
+  width: 100%;
+  border-radius: 40px 40px 0 0;
+  padding: 30px 20px 32px;
+  margin-top: 0;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  body.page2 .form-card {
+      max-width: 100%;
+      border-radius: 0;
+      padding: 60px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  body.page2 .form-card form {
+      width: 100%;
+      max-width: 500px;
+  }
+}
+
+body.page2 .form-title {
+  margin: 0 0 24px;
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+
+body.page2 .input-group {
+  margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  background-color: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #888;
+  padding: 14px 16px;
+  margin-bottom: 0;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  color: #666;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  outline: none;
+  border-color: #555;
+}
+
+body.page2 .checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+body.page2 .checkbox-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background-color: transparent;
+  border: 2px solid #666;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+body.page2 .checkbox-container label {
+  color: #999;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+}
+
+body.page2 .checkbox-container a {
+  color: #e61e2a;
+  text-decoration: none;
+}
+
+body.page2 .checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+body.page2 .button-wrapper {
+  display: flex;
+  justify-content: center; 
+  width: 100%;
+  margin-top: 32px;
+}
+
+body.page2 .btn-submit {
+  background-color: #e61e2a; 
+  font-family: 'Arial Black', sans-serif;
+  color: white;
+  padding: 14px 50px;        
+  border: none;
+  border-radius: 8px;         
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 200px;
+  text-transform: none;
+  text-decoration: none;
+}
+
+body.page2 .btn-submit:hover {
+  background-color: #cc1a24;
+  text-decoration: none;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body.page7 {
+    background-color: black;
+    display: block;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+body.page7 .mobile-container {
+    background-color: #000000;
+    width: 95%;
+    max-width: 380px;
+    height: 90vh;
+    max-height: 800px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: none;
+    margin: 20px auto;
+    overflow-y: auto;
+}
+
+body.page7 .back-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+body.page7 .main-title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+body.page7 details {
+  margin-top: 20px;
+  
+}
+
+body.page7 .coupon-details {
+    display: flex;
+  background-color: #D9D9D9;
+  padding: 15px 20px;
+  color: black;
+    border-radius: 5px;
+    justify-content: center;
+   flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.page7 .chevron {
+  transition: transform 0.3s;
+}
+
+body.page7 details[open] .chevron {
+  transform: rotate(180deg);
+}
+body.page7 details summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+body.page7 details summary::-webkit-details-marker {
+  display: none;
+}
+
+body.page7 .coupon-bar {
+  display: flex;
+  background-color: #D9D9D9;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+body.page7 .promo-code {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+body.page7 .footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+body.page7 .foot-locker-logo {
+    width: 110px;
+    height: auto;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.pageY {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #191919;
+  color: #f9fafb;
+}
+
+body.pageY img {
+  max-width: 100%;
+  display: block;
+}
+
+body.pageY button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+body.pageY button:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 3px;
+}
+
+/* Top bar ------------------------------------------------------ */
+
+body.pageY .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  position: relative;
+  z-index: 10;
+}
+
+body.pageY .icon-button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.pageY .icon-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body.pageY .top-spacer {
+  flex: 1;
+}
+
+/* Main layout -------------------------------------------------- */
+
+body.pageY .main-layout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+
+body.pageY .wheel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+}
+
+body.pageY .wheel-wrapper {
+  position: relative;
+  width: min(80vw, 360px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.pageY .wheel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.8s ease-out;
+}
+
+body.pageY .go-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  max-width: 110px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+body.pageY .go-button img {
+  width: 100%;
+  height: auto;
+}
+
+body.pageY .go-button:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.4));
+}
+
+body.pageY .go-button:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+body.pageY .spin-counter {
+  width: min(58vw, 260px);
+}
+
+body.pageY .spin-counter-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Main logo -------------------------------------------------- */
+
+body.pageY .main-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem ;
+}
+
+body.pageY .main-logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Bottom logo -------------------------------------------------- */
+
+body.pageY .bottom-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0 1.6rem;
+}
+
+body.pageY .footlocker-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Spin animation ----------------------------------------------- */
+
+@keyframes spin-wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1440deg);
+  }
+}
+
+body.pageY .wheel-image.spin {
+  animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* Responsive tweaks -------------------------------------------- */
+
+@media (min-height: 780px) {
+  body.pageY .wheel-section {
+    gap: 2rem;
+  }
+
+  body.pageY .bottom-logo-container {
+    padding-top: 1.6rem;
+  }
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.pagey {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #191919;
+  color: #f9fafb;
+}
+
+body.pagey img {
+  max-width: 100%;
+  display: block;
+}
+
+body.pagey button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+body.pagey button:focus-visible {
+  outline: 2px solid #f97316;
+  outline-offset: 3px;
+}
+
+/* top bar */
+
+body.pagey .top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 1.4rem;
+  position: relative;
+  z-index: 10;
+}
+
+body.pagey .icon-button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.pagey .icon-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+body.pagey .top-spacer {
+  flex: 1;
+}
+
+/* main layout */
+
+body.pagey .main-layout {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  gap: 20px;
+}
+
+body.pagey .wheel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 420px;
+  margin: 1rem 0;
+}
+
+body.pagey .wheel-wrapper {
+  position: relative;
+  width: min(80vw, 360px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.pagey .wheel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.6));
+  transition: transform 0.8s ease-out;
+}
+
+body.pagey .go-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  max-width: 110px;
+  transition: transform 0.12s ease, filter 0.12s ease;
+}
+
+body.pagey .go-button img {
+  width: 100%;
+  height: auto;
+}
+
+body.pagey .go-button:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.4));
+}
+
+body.pagey .go-button:active {
+  transform: translate(-50%, -50%) scale(0.96);
+}
+
+body.pagey .spin-counter {
+  width: min(58vw, 260px);
+}
+
+body.pagey .spin-counter-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* main logo */
+
+body.pagey .main-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem ;
+  margin: 1.2rem 0;
+}
+
+body.pagey .main-logo {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* bottom logo */
+
+body.pagey .bottom-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0 1.6rem;
+  margin-top: 1rem;
+}
+
+body.pagey .footlocker-logo {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+
+body.pagey .wheel-image.spin {
+  animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+/* overlay */
+body.pagey .overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+body.pagey #toggle:checked ~ .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.pagey .overlay img {
+  max-width: 80%;
+  height: auto;
+}
+
+body.pagey #toggle:checked ~ .content {
+  filter: blur(6px);
+  transition: filter 0.3s ease;
+}
+
+/* responsive */
+
+@media (min-height: 780px) {
+  body.pagey .wheel-section {
+    gap: 2rem;
+  }
+
+  body.pagey .bottom-logo-container {
+    padding-top: 1.6rem;
+  }
+}
+
+
