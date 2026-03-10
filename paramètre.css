@@ -130,6 +130,21 @@ body.paramètres header button:focus-visible {
       text-align: right;
       min-width: 140px;
     }
+    body.paramètres .btn_a {
+      display: inline-block;
+      background-color: #f4ebeb;
+      color: rgb(5, 4, 4);
+      font-weight: bold;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      padding: 15px;
+  
+    }
 
     body.paramètres .info-row .value {
       color: #ccc;
