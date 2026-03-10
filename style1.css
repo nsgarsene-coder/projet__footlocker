@@ -18,11 +18,11 @@
       }
   }
 
-  body {
+  body.page1 {
       background-color: var(--bg);
       color: var(--text);
   }
-  .container {
+  body.page1 .container {
       display: grid;
       flex-direction: column;
       align-items: center;
@@ -30,7 +30,7 @@
       height:  clamp(100vh, 100vw, 100vh);
       background-color: var(--bg);
   }
-    .hero_section {
+    body.page1 .hero_section {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,7 +40,7 @@
         position: relative;
     
     }
-   .section_container {
+   body.page1 .section_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,57 +49,21 @@
     background-color: var(--bg);
      position: relative;
    }
-   .word_spin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: clamp(5px, 2vw, 5px);
-   }
-   .win_TO {
-    display: flex;
-    flex-direction:row-reverse;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-        gap: clamp(10px, 5vw, 10px);
-   }
-   .logo_win {
-     display: flex;
-    align-items: center;
-    justify-content: center;
-   }
-    .win_logo {
-        max-width: 156px;
-        display: flex;
-        height: clamp(40px, 10vw, 54px);
-        
-    }
-    .carré {
-        position: relative;
-        width: clamp(40px, 10vw, 54px);
-        height: clamp(40px, 10vw, 54px);
-        background-color: #AC0000;
-        color: var(--text);
-        display: flex;
-        font-size: 18px;
-        font-weight: bold;
-        align-items: center;
-        justify-content: center;
-    }
-    .wheel_section {
+   
+    body.page1 .wheel_section {
   position: relative;
   width: clamp(300px, 80vw, 402px);
   margin: 0 auto;
   margin-bottom: 0;
 }
 
-.wheel_section svg {
+body.page1 .wheel_section svg {
   width: clamp(100%, 80vw, 100%);
   height: auto;
   display: block;
 }
 
-.CTA_container {
+body.page1 .CTA_container {
   position: absolute;
   display: flex;
   align-items: center;
@@ -115,7 +79,7 @@
 
 }
 
-.CTA_button {
+body.page1 .CTA_button {
   background: #D70101;
   color: white;
   font-weight: clamp(700px, 5vw, 700px);
@@ -127,23 +91,27 @@
   flex-direction: column;
   padding: clamp(18px, 5vw, 18px) clamp(40px, 10vw, 40px);
 }
-.text1 {
+body.page1 .text1 {
   font-size: clamp(14px, 5vw, 16px);
   margin-bottom: clamp(8px, 2vw, 8px);
   
 }
-.text2 {
+body.page1 .text2 {
   font-size: clamp(16px, 5vw, 18px);
   font-weight: bold;
 }
+body.page1 a {
+    color: var(--accent);
+    text-decoration: none;
+}
 @media (max-width: 600px) {
-    .win_TO {
+    body.page1 .win_TO {
         flex-direction: column;
         gap: 5px;
     }
 }
 @media (max-width: 400px) {
-    .win_TO {
+    body.page1 .win_TO {
         gap: 3px;
     }
 }

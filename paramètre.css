@@ -4,7 +4,7 @@
       padding: 0;
     }
 
-   body {
+   body.paramètres {
   background-color: #1a1a1a;
   color: white;
   font-family: Arial, sans-serif;
@@ -14,29 +14,29 @@
   min-height: 100vh;
 }
 
-.container {
+body.paramètres .container {
   width: 100%;
   max-width: 400px;  /* ← limite la largeur à 400px */
   padding: 20px;
 }
 
- header {
+body.paramètres header {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
 }
-header img {
+body.paramètres header img {
   max-width: 100%;
   display: block;
 
 }
- header button:focus-visible {
+body.paramètres header button:focus-visible {
   outline: 2px solid #f97316;
   outline-offset: 3px;
 }
 
-    .back-btn {
+    body.paramètres .back-btn {
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -50,7 +50,7 @@ header img {
       justify-content: center;
       margin-bottom: 30px;
     }
-     .section-title {
+     body.paramètres .section-title {
       text-align: center;
       font-size: 22px;
       font-weight: 900;
@@ -61,11 +61,11 @@ header img {
     }
 
   
-    .input-group {
+    body.paramètres .input-group {
       margin-bottom: 16px;
     }
 
-    .input-group input {
+    body.paramètres .input-group input {
       width: 100%;
       background: transparent;
       border: none;
@@ -76,12 +76,12 @@ header img {
       outline: none;
     }
 
-    .input-group input::placeholder {
+    body.paramètres .input-group input::placeholder {
       color: #888;
     }
 
   
-    .btn-white {
+    body.paramètres .btn-white {
       width: 100%;
       padding: 14px;
       background: white;
@@ -96,7 +96,7 @@ header img {
 
     }
 
-    .btn-gray {
+    body.paramètres .btn-gray {
       width: 100%;
       padding: 14px;
       background: #555;
@@ -111,12 +111,12 @@ header img {
     }
 
   
-    .separator {
+    body.paramètres .separator {
       margin: 36px 0;
     }
 
     
-    .info-row {
+    body.paramètres .info-row {
       display: flex;
       justify-content: center;
       gap: 6px;
@@ -124,44 +124,59 @@ header img {
       font-size: 14px;
     }
 
-    .info-row .label {
+    body.paramètres .info-row .label {
       font-weight: 700;
       color: white;
       text-align: right;
       min-width: 140px;
     }
+    body.paramètres .btn_a {
+      display: inline-block;
+      background-color: #f4ebeb;
+      color: rgb(5, 4, 4);
+      font-weight: bold;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      padding: 15px;
+  
+    }
 
-    .info-row .value {
+    body.paramètres .info-row .value {
       color: #ccc;
       text-align: left;
       min-width: 100px;
     }
 
   
-    .error-text {
+    body.paramètres .error-text {
       color: #e74c3c;
       font-size: 13px;
       text-align: center;
       margin-bottom: 30px;
     }
-    .bottom-logo-container {
+    body.paramètres .bottom-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.2rem 0 1.6rem;
 }
 
-.footlocker-logo {
+body.paramètres .footlocker-logo {
   height: 38px;
   width: auto;
   object-fit: contain;
 }
 @media (min-height: 780px) {
-  .wheel-section {
+  body.paramètres .wheel-section {
     gap: 2rem;
   }
 
-  .bottom-logo-container {
+  body.paramètres .bottom-logo-container {
     padding-top: 1.6rem;
   }
 }

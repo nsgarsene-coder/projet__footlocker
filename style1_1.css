@@ -6,7 +6,7 @@
   padding: 0;
 }
 
-body {
+body.page1_1 {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   min-height: 100vh;
@@ -16,26 +16,26 @@ body {
   color: #f9fafb;
 }
 
-img {
+body.page1_1 img {
   max-width: 100%;
   display: block;
 }
 
-button {
+body.page1_1 button {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
 }
 
-button:focus-visible {
+body.page1_1 button:focus-visible {
   outline: 2px solid #f97316;
   outline-offset: 3px;
 }
 
-/* Top bar ------------------------------------------------------ */
 
-.top-bar {
+
+body.page1_1 .top-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +44,7 @@ button:focus-visible {
   z-index: 10;
 }
 
-.icon-button {
+body.page1_1 .icon-button {
   width: 36px;
   height: 36px;
   display: flex;
@@ -52,19 +52,17 @@ button:focus-visible {
   justify-content: center;
 }
 
-.icon-button img {
+body.page1_1 .icon-button img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.top-spacer {
+body.page1_1 .top-spacer {
   flex: 1;
 }
 
-/* Main layout -------------------------------------------------- */
-
-.main-layout {
+body.page1_1 .main-layout {
   flex: 1;
   display: flex;
   align-items: center;
@@ -72,7 +70,7 @@ button:focus-visible {
   padding: 0 1.5rem;
 }
 
-.wheel-section {
+body.page1_1 .wheel-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +79,7 @@ button:focus-visible {
   max-width: 420px;
 }
 
-.wheel-wrapper {
+body.page1_1 .wheel-wrapper {
   position: relative;
   width: min(80vw, 360px);
   aspect-ratio: 1 / 1;
@@ -90,7 +88,7 @@ button:focus-visible {
   justify-content: center;
 }
 
-.wheel-image {
+body.page1_1 .wheel-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -98,7 +96,7 @@ button:focus-visible {
   transition: transform 0.8s ease-out;
 }
 
-.go-button {
+body.page1_1 .go-button {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -108,40 +106,39 @@ button:focus-visible {
   transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-.go-button img {
+body.page1_1 .go-button img {
   width: 100%;
   height: auto;
 }
 
-.go-button:hover {
+body.page1_1 .go-button:hover {
   transform: translate(-50%, -50%) scale(1.04);
   filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.4));
 }
 
-.go-button:active {
+body.page1_1 .go-button:active {
   transform: translate(-50%, -50%) scale(0.96);
 }
 
-.spin-counter {
+body.page1_1 .spin-counter {
   width: min(58vw, 260px);
 }
 
-.spin-counter-image {
+body.page1_1 .spin-counter-image {
   width: 100%;
   height: auto;
   object-fit: contain;
 }
 
-/* Main logo -------------------------------------------------- */
 
-.main-logo-container {
+body.page1_1 .main-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.1rem ;
 }
 
-.main-logo {
+body.page1_1 .main-logo {
   height: 100px;
   width: auto;
   object-fit: contain;
@@ -149,14 +146,14 @@ button:focus-visible {
 
 /* Bottom logo -------------------------------------------------- */
 
-.bottom-logo-container {
+body.page1_1 .bottom-logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.2rem 0 1.6rem;
 }
 
-.footlocker-logo {
+body.page1_1 .footlocker-logo {
   height: 38px;
   width: auto;
   object-fit: contain;
@@ -173,18 +170,18 @@ button:focus-visible {
   }
 }
 
-.wheel-image.spin {
+body.page1_1 .wheel-image.spin {
   animation: spin-wheel 2.4s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 /* Responsive tweaks -------------------------------------------- */
 
 @media (min-height: 780px) {
-  .wheel-section {
+  body.page1_1 .wheel-section {
     gap: 2rem;
   }
 
-  .bottom-logo-container {
+  body.page1_1 .bottom-logo-container {
     padding-top: 1.6rem;
   }
 }
